@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="CSS/style.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<title>Restaurant</title>
+</head>
+
+<body>
+	<h2>Galeria d'imatges</h2>
+	<div class="gallery">
+		<div class="image-container">
+			<img src="IMAGES/plat1.jpg" alt="Imatge plat de verdures">
+		</div>
+		<div class="image-container">
+			<img src="IMAGES/plat2.jpg" alt="Imatge plat despaguettis">
+		</div>
+		<div class="image-container">
+			<img src="IMAGES/plat3.jpg" alt="Imatge plat de salmó amb verdures">
+		</div>
+	</div>
+	<!-- APARTAT IMATGE RESPONSIVA -->
+	<div>
+		<h2>Imatge responsiva</h2>
+	</div>
+	<picture>
+		<source srcset="IMAGES/img_responsive2 - copia.webp" media="(min-width: 1024px)">
+		<source srcset="IMAGES/img_responsive2.jpg" media="(min-width: 640px)">
+		<img id="imagen" src="IMAGES/img_responsive2.jpg" alt="Descripción de la imagen">
+	</picture>
+
+
+	<!-- APARTAT VIDEO -->
+	<section class="video">
+		<div class="item-1">
+			<h2>Vídeo del restaurant</h2>
+		</div>
+		<div class="item-2" onscroll="scroll()">
+			<div>
+				<video id="video1" autoplay>
+					<source src="VIDEOS/video.mp4" type="video/mp4">
+				</video>
+			</div>
+		</div>
+		<div id="contenedor-iconos">
+			<img onclick="play()" id="icono-control"
+				src="/EXAMEN/EXAMEN/IMAGES/play_arrow_24dp_FILL0_wght400_GRAD0_opsz24 (1).png">
+			<img onclick="pause()" id="icono-control2"
+				src="/EXAMEN/EXAMEN/IMAGES/pause_24dp_FILL0_wght400_GRAD0_opsz24.png">
+		</div>
+	</section>
+	<h2>Animacio</h2>
+	<div class="animacion">
+		<div class="animacio">capa</div>
+	</div>
+
+
+	<script>
+		function play() {
+			var video = document.getElementById("video1");
+			var icono = document.getElementById("icono-control");
+			if (video.paused) {
+				video.play();
+			}
+			if (video.play) {
+				console.log("El vídeo s'està reproduint")
+			}
+		}
+
+		function pause() {
+			var video = document.getElementById("video1");
+			var icono = document.getElementById("icono-control2");
+			if (video.play) {
+				video.pause();
+			}
+			if (video.pause) {
+				console.log("El vídeo està parat")
+			}
+		}
+
+
+		document.addEventListener('scroll', scroll);
+		function scroll() {
+			var video = document.getElementById("video1");
+			if (video.play) {
+				video.pause();
+			}
+		}
+	</script>
+</body>
+
+</html>
