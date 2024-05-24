@@ -1,0 +1,65 @@
+/* CSS Animation */
+.animacio {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background-color: orange;
+    animation: animacio 10s infinite;
+}
+
+@keyframes animacio {
+    0% {
+        background-color: orange;
+        transform: rotate(0deg);
+        width: 50px;
+        height: 50px;
+    }
+    30% {
+        background-color: yellow;
+        transform: rotate(90deg);
+        height: 60px;
+    }
+    50% {
+        background-color: blue;
+        transform: rotate(180deg);
+        height: 80px;
+    }
+    70% {
+        background-color: green;
+        transform: rotate(180deg);
+        width: 100px;
+        height: 80px;
+    }
+    100% {
+        background-color: orange;
+        transform: rotate(360deg);
+        width: 50px;
+        height: 50px;
+    }
+}
+
+.animacion{
+    width: 100%;
+    height: 100px;
+}
+
+.gallery{
+    display: flex;
+    gap:20px;
+}
+
+.image-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.image-container img{
+    width: 100%;
+    height: auto;
+}
+
+#imagen {
+    width: 80%;
+    height: auto;
+}
